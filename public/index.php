@@ -1,4 +1,10 @@
-<?php
-# page shows cars
+<html>
+    <body>
+        hellow
+        <?php
+        # page shows cars
+            phpinfo();
 
-?>
+        ?>
+    </body>
+</html>
