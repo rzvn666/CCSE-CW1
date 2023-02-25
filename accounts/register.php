@@ -14,53 +14,53 @@
         $password = hash('sha256',$conn -> real_escape_string($_POST['psw']));
         $conf_password = hash('sha256',$conn -> real_escape_string($_POST['psw-repeat']));
 
-        echo($password);
-        echo($conf_password);
-
         // form validation: ensure that the form is correctly filled ...        
         if (empty($email)) {
             header("Location: ../register.html?error=email-empty");
+            die();
         } 
 
         elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             header("Location: ../register.html?error=email-invalid");
+            die();
         }
 
         elseif(isset($email)){
             $sql = "SELECT 1 FROM ccse_accounts.accounts WHERE email='$email';";
-            if ($conn->query($sql) === 1) {
+            $query = $conn->query($sql);
+            if ($query->num_rows) {
                 header("Location: ../register.html?error=email-taken");
+                die();
             }
         }
 
         if (empty($password)) { 
             header("Location: ../register.html?error=pass-empty"); 
+            die();
         }
 
         if ($password != $conf_password) {
             header("Location: ../register.html?error=pass-not-matched");
+            die();
         }
 
         if ($password == $conf_password) {
             $sql = "INSERT INTO ccse_accounts.accounts (`first_name`, `last_name`, `email`, `pass`, `date_created`) 
             VALUES ('$firstname','$lastname','$email','$password',NOW());";
             if ($conn->query($sql) === TRUE) {
+                $conn->close();
                 header("Location: http://localhost");
+                die();
             } else {
-                echo "Error inserting: " . $conn->error;
+                header("Location: ../register.html?error=wrong-query");
+                die();
             }
         }
         
 
     } else{
         header("Location: ../register.html");
+        die();
     }
 
-
-
-    $conn->close();
-
-
-    //header("Location: https://localhost");
-    //die();
 ?>
