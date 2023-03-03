@@ -5,6 +5,8 @@
     
     include('../include/db-connection.php');
 
+    session_start();
+
     if (isset($_POST['reg-button'])) {
         // receive all input values from the form
         // Escape special characters, if any
@@ -49,7 +51,9 @@
             VALUES ('$firstname','$lastname','$email','$password',NOW());";
             if ($conn->query($sql) === TRUE) {
                 $conn->close();
-                header("Location: http://localhost");
+                $_SESSION['email']=$email;
+                $_SESSION['firstname']=$firstname;
+                header("Location: ../public/index.php");
                 die();
             } else {
                 header("Location: ../register.html?error=wrong-query");

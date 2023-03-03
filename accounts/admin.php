@@ -8,6 +8,13 @@
 # page cannot be accessed by typing url
 # only admins, no other accounts logged in
 
-include('../accounts/admin.php');
+    session_start();
+
+    if($_SESSION['firstname']!='admin' AND $_SESSION['email']!='admin@admin.com' AND $_SESSION['admin']!=1){
+        header('Location: error.php');
+    } else {
+        echo('hellow');
+
+    }
 
 ?>

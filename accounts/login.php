@@ -27,13 +27,16 @@ if (isset($_POST['login-button'])) {
   
     if (count($errors) == 0) {
 
-        $query = "SELECT email FROM ccse_accounts.accounts WHERE email='$email' AND pass='$password'";
+        $query = "SELECT * FROM ccse_accounts.accounts WHERE email='$email' AND pass='$password'";
         echo($query);
         $results = $conn->query($query);
         $rows=$results->fetch_array();
         if (mysqli_num_rows($results) == 1) {
-            $_SESSION['user'] = $rows['username'];
-            $_SESSION['success'] = "You are now logged in";
+            $_SESSION['email'] = $rows['email'];
+            $_SESSION['firstname'] = $rows['first_name'];
+            if($rows['admin']==1){
+                $_SESSION['admin']=1;
+            }
             header('location: http://localhost/?success=login');
         }else {
             header("Location: ../login.html?error=wrong-username-or-password");
