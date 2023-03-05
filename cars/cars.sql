@@ -34,7 +34,7 @@ CREATE TABLE `cars` (
   `year` int NOT NULL,
   `price` int NOT NULL,
   `image` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `cars`
