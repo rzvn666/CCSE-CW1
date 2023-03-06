@@ -51,6 +51,7 @@
             VALUES ('$firstname','$lastname','$email','$password',NOW());";
             if ($conn->query($sql) === TRUE) {
                 $conn->close();
+                $_SESSION['acc_id']=$rows['account_id'];
                 $_SESSION['email']=$email;
                 $_SESSION['firstname']=$firstname;
                 header("Location: ../public/index.php");

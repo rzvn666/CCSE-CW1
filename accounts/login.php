@@ -32,6 +32,7 @@ if (isset($_POST['login-button'])) {
         $results = $conn->query($query);
         $rows=$results->fetch_array();
         if (mysqli_num_rows($results) == 1) {
+            $_SESSION['acc_id']=$rows['account_id'];
             $_SESSION['email'] = $rows['email'];
             $_SESSION['firstname'] = $rows['first_name'];
             if($rows['admin']==1){

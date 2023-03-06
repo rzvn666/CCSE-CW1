@@ -8,6 +8,7 @@
 # page cannot be accessed by typing url
 # only admins, no other accounts logged in
 
+include('nav-bar.php');
 include('../accounts/admin.php');
 
 ?>

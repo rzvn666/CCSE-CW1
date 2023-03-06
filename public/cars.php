@@ -5,6 +5,9 @@
 </head>
 
 <body>
+
+    <?php include('nav-bar.php'); ?>
+
     <div class="main-div">
         <div class="cars-div">
 
@@ -24,7 +27,10 @@
                     </div>
                 </div>
                 <div class="car-cart-button">
-                    <button>Add To Cart</button>
+                    <form action="basket.php" method="POST">
+                        <input type="hidden" name="car-id" value=1>
+                        <button name="send" value="add">Add To Cart</button>
+                    </form>
                 </div>
             </div>
             <!--end car-->
@@ -45,7 +51,10 @@
                     </div>
                 </div>
                 <div class="car-cart-button">
-                    <button>Add To Cart</button>
+                    <form action="basket.php" method="POST">
+                        <input type="hidden" name="car-id" value=2>
+                        <button name="send" value="add">Add To Cart</button>
+                    </form>
                 </div>
             </div>
             <!--end car-->
@@ -66,7 +75,10 @@
                     </div>
                 </div>
                 <div class="car-cart-button">
-                    <button>Add To Cart</button>
+                    <form action="basket.php" method="POST">
+                        <input type="hidden" name="car-id" value=3>
+                        <button name="send" value="add">Add To Cart</button>
+                    </form>
                 </div>
             </div>
             <!--end car-->
@@ -87,7 +99,10 @@
                     </div>
                 </div>
                 <div class="car-cart-button">
-                    <button>Add To Cart</button>
+                    <form action="basket.php" method="POST">
+                        <input type="hidden" name="car-id" value=4>
+                        <button name="send" value="add">Add To Cart</button>
+                    </form>
                 </div>
             </div>
             <!--end car-->
@@ -108,7 +123,10 @@
                     </div>
                 </div>
                 <div class="car-cart-button">
-                    <button>Add To Cart</button>
+                    <form action="basket.php" method="POST">
+                        <input type="hidden" name="car-id" value=5>
+                        <button name="send" value="add">Add To Cart</button>
+                    </form>
                 </div>
             </div>
             <!--end car-->
@@ -129,7 +147,10 @@
                     </div>
                 </div>
                 <div class="car-cart-button">
-                    <button>Add To Cart</button>
+                    <form action="basket.php" method="POST">
+                        <input type="hidden" name="car-id" value=6>
+                        <button name="send" value="add">Add To Cart</button>
+                    </form>
                 </div>
             </div>
             <!--end car-->
@@ -150,7 +171,10 @@
                     </div>
                 </div>
                 <div class="car-cart-button">
-                    <button>Add To Cart</button>
+                    <form action="basket.php" method="POST">
+                        <input type="hidden" name="car-id" value=7>
+                        <button name="send" value="add">Add To Cart</button>
+                    </form>
                 </div>
             </div>
             <!--end car-->
@@ -171,7 +195,10 @@
                     </div>
                 </div>
                 <div class="car-cart-button">
-                    <button>Add To Cart</button>
+                    <form action="basket.php" method="POST">
+                        <input type="hidden" name="car-id" value=8>
+                        <button name="send" value="add">Add To Cart</button>
+                    </form>
                 </div>
             </div>
             <!--end car-->
@@ -192,7 +219,10 @@
                     </div>
                 </div>
                 <div class="car-cart-button">
-                    <button>Add To Cart</button>
+                    <form action="basket.php" method="POST">
+                        <input type="hidden" name="car-id" value=9>
+                        <button name="send" value="add">Add To Cart</button>
+                    </form>
                 </div>
             </div>
             <!--end car-->
@@ -213,7 +243,10 @@
                     </div>
                 </div>
                 <div class="car-cart-button">
-                    <button>Add To Cart</button>
+                    <form action="basket.php" method="POST">
+                        <input type="hidden" name="car-id" value=10>
+                        <button name="send" value="add">Add To Cart</button>
+                    </form>
                 </div>
             </div>
             <!--end car-->
