@@ -18,14 +18,18 @@
 
         $sql="SELECT * FROM ccse_applications.applications WHERE acc_id='{$_SESSION['acc_id']}'";                               
         $query=$conn->query($sql);
-        $row=$query->fetch_assoc();
+        while($row=$query->fetch_assoc()){;
 
-        if(isset($row['app_id'])){
-            $sql_car="SELECT * FROM ccse_cars.cars WHERE id='{$row['car_id']}'";                               
-            $query_car=$conn->query($sql_car);
-            $row_car=$query_car->fetch_assoc();
-            echo'<label><strong>Application Status</strong><br>'.$row_car['make'].' '.$row_car['model'].' '.$row_car['year'].' ----- '.$row['status'].'</label><br><br>';
-            echo'<label><strong>Uploaded File</strong><br>'.substr($row_customer['upload'],13).'</label><br><br>';
+            if(isset($row['app_id'])){
+                $sql_car="SELECT * FROM ccse_cars.cars WHERE id='{$row['car_id']}'";                               
+                $query_car=$conn->query($sql_car);
+                $row_car=$query_car->fetch_assoc();
+                echo'<div id="customer-uploads" style="background-color:#b5b5b5; width:640;">';
+                echo'   <label><strong>Application Status</strong><br>'.$row_car['make'].' '.$row_car['model'].' '.$row_car['year'].' ----- '.$row['status'].'</label><br><br>';
+                echo'   <label><strong>Application Date</strong><br>'.$row['date'].'</label><br><br>';
+                echo'   <label><strong>Uploaded File</strong><br><a href="'.$row['upload'].'">'.substr($row['upload'],25).'</a></label><br><br>';
+                echo'</div><br>';
+            }
         }
         
     } else {

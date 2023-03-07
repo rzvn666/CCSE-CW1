@@ -69,19 +69,19 @@
         }
 
         echo' <h1>CUSTOMER UPLOADS</h1>';
-        $sql_customer='SELECT account_id, email, upload FROM ccse_accounts.accounts';
+        $sql_customer='SELECT account_id, email FROM ccse_accounts.accounts';
         $query_customer=$conn->query($sql_customer);
 
         while($row_customer=$query_customer->fetch_assoc()){
-            if(isset($row_customer['upload'])){
+
+            $sql_application="SELECT * FROM ccse_applications.applications WHERE acc_id={$row_customer['account_id']}";
+            $query_application=$conn->query($sql_application);
+
+            while($row_application=$query_application->fetch_assoc()){
                 echo'<div id="customer-uploads" style="background-color:#b5b5b5; width:640;">';
                     echo'<label><strong>Customer</strong><br>'.$row_customer['email'].'</label><br></br>';
-                    echo'<label><strong>Uploaded File</strong><br><a href="'.$row_customer['upload'].'">'.substr($row_customer['upload'],13).'</a></label><br><br>';            
+                    echo'<label><strong>Uploaded File</strong><br><a href="'.$row_application['upload'].'">'.substr($row_application['upload'],25).'</a></label><br><br>';            
                     
-                    $sql_application="SELECT * FROM ccse_applications.applications WHERE acc_id={$row_customer['account_id']}";
-                    $query_application=$conn->query($sql_application);
-                    $row_application=$query_application->fetch_assoc();
-                
                     $sql_cust_car="SELECT * FROM ccse_cars.cars WHERE id={$row_application['car_id']}";
                     $query_cust_car=$conn->query($sql_cust_car);
                     $row_cust_car=$query_cust_car->fetch_assoc();
@@ -91,6 +91,7 @@
                     $row_financing=$query_financing->fetch_assoc();
 
                     echo'<label><strong>Car</strong><br>'.$row_cust_car['make'].' '.$row_cust_car['model'].' '.$row_cust_car['year'].'</label><br></br>';
+                    echo'<label><strong>Application Date</strong><br>'.$row_application['date'].'</label><br><br>';
                     echo'<label><strong>Financing type</strong><br>'.$row_financing['months'].' months @ £'.$row_financing['price'].' per month. <br><strong>Total: £'.$row_financing['total'].'</strong></label><br></br>';
                     echo'<label><strong>Status</strong><br>'.$row_application['status'].'</label><br></br>';
 

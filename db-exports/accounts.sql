@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 07, 2023 at 03:35 PM
+-- Generation Time: Mar 07, 2023 at 06:36 PM
 -- Server version: 10.11.2-MariaDB
 -- PHP Version: 8.2.3
 
@@ -36,7 +36,6 @@ CREATE TABLE `accounts` (
   `date_created` date DEFAULT NULL,
   `address` text DEFAULT NULL,
   `mobile` char(11) DEFAULT NULL,
-  `upload` text DEFAULT NULL,
   `admin` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -44,12 +43,12 @@ CREATE TABLE `accounts` (
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`account_id`, `first_name`, `last_name`, `email`, `pass`, `date_created`, `address`, `mobile`, `upload`, `admin`) VALUES
-(1, 'admin', 'admin', 'admin@admin.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '2023-02-25', NULL, NULL, NULL, 1),
-(2, 'a', 'a', 'a@a.com', 'ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb', '2023-02-25', NULL, NULL, NULL, NULL),
-(3, 'b', 'b', 'b@b.com', '3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d', '2023-02-25', NULL, NULL, NULL, NULL),
-(4, 'c', 'c', 'c@c.com', '2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6', '2023-02-26', NULL, NULL, NULL, NULL),
-(5, 'd', 'd', 'd@d.com', '18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4', '2023-02-27', NULL, NULL, NULL, NULL);
+INSERT INTO `accounts` (`account_id`, `first_name`, `last_name`, `email`, `pass`, `date_created`, `address`, `mobile`, `admin`) VALUES
+(1, 'admin', 'admin', 'admin@admin.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '2023-02-25', NULL, NULL, 1),
+(2, 'a', 'a', 'a@a.com', 'ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb', '2023-02-25', NULL, NULL, NULL),
+(3, 'b', 'b', 'b@b.com', '3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d', '2023-02-25', NULL, NULL, NULL),
+(4, 'c', 'c', 'c@c.com', '2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6', '2023-02-26', NULL, NULL, NULL),
+(5, 'd', 'd', 'd@d.com', '18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4', '2023-02-27', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables

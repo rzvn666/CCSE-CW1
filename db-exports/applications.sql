@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 07, 2023 at 03:36 PM
+-- Generation Time: Mar 07, 2023 at 06:41 PM
 -- Server version: 10.11.2-MariaDB
 -- PHP Version: 8.2.3
 
@@ -33,7 +33,8 @@ CREATE TABLE `applications` (
   `car_id` int(11) NOT NULL,
   `fin_id` int(11) NOT NULL,
   `date` date NOT NULL,
-  `status` varchar(10) NOT NULL
+  `status` varchar(10) NOT NULL,
+  `upload` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
