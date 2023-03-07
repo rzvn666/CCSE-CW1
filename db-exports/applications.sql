@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 06, 2023 at 07:54 PM
+-- Generation Time: Mar 07, 2023 at 03:36 PM
 -- Server version: 10.11.2-MariaDB
 -- PHP Version: 8.2.3
 
@@ -55,7 +55,7 @@ ALTER TABLE `applications`
 -- AUTO_INCREMENT for table `applications`
 --
 ALTER TABLE `applications`
-  MODIFY `app_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `app_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

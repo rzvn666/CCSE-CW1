@@ -18,12 +18,12 @@
 
         // form validation: ensure that the form is correctly filled ...        
         if (empty($email)) {
-            header("Location: ../register.html?error=email-empty");
+            header("Location: register.html?error=email-empty");
             die();
         } 
 
         elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            header("Location: ../register.html?error=email-invalid");
+            header("Location: register.html?error=email-invalid");
             die();
         }
 
@@ -31,18 +31,18 @@
             $sql = "SELECT 1 FROM ccse_accounts.accounts WHERE email='$email';";
             $query = $conn->query($sql);
             if ($query->num_rows) {
-                header("Location: ../register.html?error=email-taken");
+                header("Location: register.html?error=email-taken");
                 die();
             }
         }
 
         if (empty($password)) { 
-            header("Location: ../register.html?error=pass-empty"); 
+            header("Location: register.html?error=pass-empty"); 
             die();
         }
 
         if ($password != $conf_password) {
-            header("Location: ../register.html?error=pass-not-matched");
+            header("Location: register.html?error=pass-not-matched");
             die();
         }
 
@@ -54,17 +54,17 @@
                 $_SESSION['acc_id']=$rows['account_id'];
                 $_SESSION['email']=$email;
                 $_SESSION['firstname']=$firstname;
-                header("Location: ../public/index.php");
+                header("Location: index.php");
                 die();
             } else {
-                header("Location: ../register.html?error=wrong-query");
+                header("Location: register.html?error=wrong-query");
                 die();
             }
         }
         
 
     } else{
-        header("Location: ../register.html");
+        header("Location: register.html");
         die();
     }
 

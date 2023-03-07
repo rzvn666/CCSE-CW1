@@ -11,248 +11,56 @@
     <div class="main-div">
         <div class="cars-div">
 
-            <!--start car-->
-            <div class="car-card">
-                <div class="img-container">
-                    <img src="/images/renault-megane.jpg" width="320" height="180" alt="renault-megane">
-                </div>
-                <div class="car-info">
-                    <div class="car-label">
-                        <div class="car-name-label">
-                            <span class="car-name">Renault Megane</span>
-                            <span class="car-year">2015</span>
-                        </div>
-                    <div class="car-price-label">
-                        <span class="car-value">£5,700.00</span>
-                    </div>
-                </div>
-                <div class="car-cart-button">
-                    <form action="basket.php" method="POST">
-                        <input type="hidden" name="car-id" value=1>
-                        <button name="send" value="add">Add To Cart</button>
-                    </form>
-                </div>
-            </div>
-            <!--end car-->
+        <?php
 
-            <!--start car-->
-            <div class="car-card">
-                <div class="img-container">
-                    <img src="/images/citroen-c1.jpg" width="320" height="180" alt="citroen-c1">
-                </div>
-                <div class="car-info">
-                    <div class="car-label">
-                        <div class="car-name-label">
-                            <span class="car-name">Citroen C1</span>
-                            <span class="car-year">2013</span>
-                        </div>
-                    <div class="car-price-label">
-                        <span class="car-value">£4,700.00</span>
-                    </div>
-                </div>
-                <div class="car-cart-button">
-                    <form action="basket.php" method="POST">
-                        <input type="hidden" name="car-id" value=2>
-                        <button name="send" value="add">Add To Cart</button>
-                    </form>
-                </div>
-            </div>
-            <!--end car-->
-
-            <!--start car-->
-            <div class="car-card">
-                <div class="img-container">
-                    <img src="/images/toyota-aygo.jpg" width="320" height="180" alt="toyota-aygo">
-                </div>
-                <div class="car-info">
-                    <div class="car-label">
-                        <div class="car-name-label">
-                            <span class="car-name">Toyota Aygo</span>
-                            <span class="car-year">2014</span>
-                        </div>
-                    <div class="car-price-label">
-                        <span class="car-value">£5,700.00</span>
-                    </div>
-                </div>
-                <div class="car-cart-button">
-                    <form action="basket.php" method="POST">
-                        <input type="hidden" name="car-id" value=3>
-                        <button name="send" value="add">Add To Cart</button>
-                    </form>
-                </div>
-            </div>
-            <!--end car-->
-
-            <!--start car-->
-            <div class="car-card">
-                <div class="img-container">
-                    <img src="/images/ford-ka.jpg" width="320" height="180" alt="ford-ka">
-                </div>
-                <div class="car-info">
-                    <div class="car-label">
-                        <div class="car-name-label">
-                            <span class="car-name">Ford KA</span>
-                            <span class="car-year">2015</span>
-                        </div>
-                    <div class="car-price-label">
-                        <span class="car-value">£5,700.00</span>
-                    </div>
-                </div>
-                <div class="car-cart-button">
-                    <form action="basket.php" method="POST">
-                        <input type="hidden" name="car-id" value=4>
-                        <button name="send" value="add">Add To Cart</button>
-                    </form>
-                </div>
-            </div>
-            <!--end car-->
-
-            <!--start car-->
-            <div class="car-card">
-                <div class="img-container">
-                    <img src="/images/vauxhall-gtc.jpg" width="320" height="180" alt="vauxhall-gtc">
-                </div>
-                <div class="car-info">
-                    <div class="car-label">
-                        <div class="car-name-label">
-                            <span class="car-name">Vauxhall GTC</span>
-                            <span class="car-year">2015</span>
-                        </div>
-                    <div class="car-price-label">
-                        <span class="car-value">£5,850.00</span>
-                    </div>
-                </div>
-                <div class="car-cart-button">
-                    <form action="basket.php" method="POST">
-                        <input type="hidden" name="car-id" value=5>
-                        <button name="send" value="add">Add To Cart</button>
-                    </form>
-                </div>
-            </div>
-            <!--end car-->
-
-            <!--start car-->
-            <div class="car-card">
-                <div class="img-container">
-                    <img src="/images/dacia-sandero-stepway.jpg" width="320" height="180" alt="dacia-sandero-stepway">
-                </div>
-                <div class="car-info">
-                    <div class="car-label">
-                        <div class="car-name-label">
-                            <span class="car-name">Dacia Sandero Stepway</span>
-                            <span class="car-year">2016</span>
-                        </div>
-                    <div class="car-price-label">
-                        <span class="car-value">£5,900.00</span>
-                    </div>
-                </div>
-                <div class="car-cart-button">
-                    <form action="basket.php" method="POST">
-                        <input type="hidden" name="car-id" value=6>
-                        <button name="send" value="add">Add To Cart</button>
-                    </form>
-                </div>
-            </div>
-            <!--end car-->
-
-            <!--start car-->
-            <div class="car-card">
-                <div class="img-container">
-                    <img src="/images/fiat-500.jpg" width="320" height="180" alt="fiat-500">
-                </div>
-                <div class="car-info">
-                    <div class="car-label">
-                        <div class="car-name-label">
-                            <span class="car-name">Fiat 500</span>
-                            <span class="car-year">2013</span>
-                        </div>
-                    <div class="car-price-label">
-                        <span class="car-value">£6,000.00</span>
-                    </div>
-                </div>
-                <div class="car-cart-button">
-                    <form action="basket.php" method="POST">
-                        <input type="hidden" name="car-id" value=7>
-                        <button name="send" value="add">Add To Cart</button>
-                    </form>
-                </div>
-            </div>
-            <!--end car-->
-
-            <!--start car-->
-            <div class="car-card">
-                <div class="img-container">
-                    <img src="/images/mazda-mx-5.jpg" width="320" height="180" alt="mazda-mx-5">
-                </div>
-                <div class="car-info">
-                    <div class="car-label">
-                        <div class="car-name-label">
-                            <span class="car-name">Mazda MX-5</span>
-                            <span class="car-year">2010</span>
-                        </div>
-                    <div class="car-price-label">
-                        <span class="car-value">£6,500.00</span>
-                    </div>
-                </div>
-                <div class="car-cart-button">
-                    <form action="basket.php" method="POST">
-                        <input type="hidden" name="car-id" value=8>
-                        <button name="send" value="add">Add To Cart</button>
-                    </form>
-                </div>
-            </div>
-            <!--end car-->
-
-            <!--start car-->
-            <div class="car-card">
-                <div class="img-container">
-                    <img src="/images/seat-ibiza.jpg" width="320" height="180" alt="seat-ibiza">
-                </div>
-                <div class="car-info">
-                    <div class="car-label">
-                        <div class="car-name-label">
-                            <span class="car-name">SEAT Ibiza</span>
-                            <span class="car-year">2013</span>
-                        </div>
-                    <div class="car-price-label">
-                        <span class="car-value">£7,400.00</span>
-                    </div>
-                </div>
-                <div class="car-cart-button">
-                    <form action="basket.php" method="POST">
-                        <input type="hidden" name="car-id" value=9>
-                        <button name="send" value="add">Add To Cart</button>
-                    </form>
-                </div>
-            </div>
-            <!--end car-->
-
-            <!--start car-->
-            <div class="car-card">
-                <div class="img-container">
-                    <img src="/images/ds-ds3.jpg" width="320" height="180" alt="ds-ds3">
-                </div>
-                <div class="car-info">
-                    <div class="car-label">
-                        <div class="car-name-label">
-                            <span class="car-name">DS DS 3</span>
-                            <span class="car-year">2016</span>
-                        </div>
-                    <div class="car-price-label">
-                        <span class="car-value">£8,050.00</span>
-                    </div>
-                </div>
-                <div class="car-cart-button">
-                    <form action="basket.php" method="POST">
-                        <input type="hidden" name="car-id" value=10>
-                        <button name="send" value="add">Add To Cart</button>
-                    </form>
-                </div>
-            </div>
-            <!--end car-->
-
-            
-
+        include('../include/db-connection.php');
+        $sql='SELECT * FROM ccse_cars.cars';
+        $query=$conn->query($sql);
+        while($row=$query->fetch_assoc()){
+            if($row['sold']==0 AND $row['reserved']==0){
+                //<!--start car-->
+                echo'        <div class="car-card">';
+                echo'            <div class="img-container">';
+                echo'                <img src="'.$row['image'].'" width="320" height="180" alt="'.$row['make'].'-'.$row['model'].'-'.$row['year'].'">';
+                echo'            </div>';
+                echo'            <div class="car-info">';
+                echo'                <div class="car-label">';
+                echo'                    <div class="car-name-label">';
+                echo'                        <span class="car-name">'.$row['make'].' '.$row['model'].'</span>';
+                echo'                        <span class="car-year">'.$row['year'].'</span>';
+                echo'                    </div>';
+                echo'                <div class="car-price-label">';
+                echo'                    <span class="car-value">£'.$row['price'][0].','.substr($row['price'],1).'.00</span>';
+                echo'                </div>';
+                echo'            </div>';
+                echo'            <div class="car-cart-button">';
+                echo'                    <form action="basket.php" method="POST">';
+                echo'                       <input type="hidden" name="car-id" value='.$row['id'].'>';
+                echo'                        <button name="send" value="add">Add To Cart</button>';
+                echo'                    </form>';
+                echo'            </div>';
+                echo'        </div>';
+                //<!--end car-->
+            } else {
+                 //<!--start car-->
+                 echo'        <div class="car-card">';
+                 echo'            <div class="img-container">';
+                 echo'                <img src="'.$row['image'].'" width="320" height="180" alt="'.$row['make'].'-'.$row['model'].'-'.$row['year'].'">';
+                 echo'            </div>';
+                 echo'            <div class="car-info">';
+                 echo'                <div class="car-label">';
+                 echo'                    <div class="car-name-label">';
+                 echo'                        <span class="car-name">'.$row['make'].' '.$row['model'].'</span>';
+                 echo'                        <span class="car-year">'.$row['year'].'</span>';
+                 echo'                    </div>';
+                 echo'                <div class="car-price-label">';
+                 echo'                    <span class="car-value">£'.$row['price'][0].','.substr($row['price'],1).'.00 ----- <strong>UNAVAILABLE</strong></span>';
+                 echo'                </div>';
+                 echo'            </div><br>';
+                 //<!--end car-->
+            }
+        }
+        ?>  
         </div>
 
 

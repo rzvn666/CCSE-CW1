@@ -3,4 +3,4 @@
     include('nav-bar.php');
 ?>
 
-<h1>index.php</h1>
+<h1>Welcome to Global Finance</h1>
