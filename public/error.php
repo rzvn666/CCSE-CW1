@@ -5,11 +5,8 @@
 //    echo "not allowed :P";
 //    header('location: index.php');
 
+include('nav-bar.php');
+
 ?>
 
-<script>
-window.setTimeout(function() {
-    window.location = 'index.php';
-  }, 1000);
-</script>
-<p>not allowed :P</p>
+<h1>You got lost! <br>Don't worry, <a href = 'cars.php'>click here</a> to go back to viewing our cars.</h1>

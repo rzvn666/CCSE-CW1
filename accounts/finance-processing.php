@@ -71,7 +71,7 @@ if(isset($_POST['finance-submit'])){
 
 
 } else {
-    header('Location: basket.php');
+    header('Location: error.php');
 }
 
 ?>

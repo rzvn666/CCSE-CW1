@@ -73,7 +73,7 @@ if(isset($_SESSION['email'])){
 
                 echo'
                     <div id="financing-div">
-                        <form action="/finance_processing.php" enctype="multipart/form-data" method="POST">
+                        <form action="/finance-processing.php" enctype="multipart/form-data" method="POST">
                             <div id="financing-form">
                                 <p>Please select your financing option (12% APR):</p>
                                 <input type="radio" id="option1" name="option" value="1" required>
