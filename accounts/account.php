@@ -33,7 +33,7 @@
         }
         
     } else {
-        header('Location: login.html?error=must-be-logged-in');
+        header('Location: login.php?error=must-be-logged-in');
 }
 
     

@@ -1,32 +1,124 @@
-<?php
-# take customer details
-# card details, etc
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Global Finance</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <?php 
+            include('nav-bar.php');
+        ?>
+        
+        <section class="signup-section">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-white">Please make the full payment at your local dealership</h1>
+                </div>
+            </div>
+        </div>
+        </section>
 
-include('nav-bar.php');
+               
+        <section class="projects-section" id="map">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-0">
+                <div class="col-md-10 col-lg-8 mx-auto text-left">
+                <?php                     
+                    if(isset($_POST['car-id'])){                    
+                        echo'<style>';
+                        echo'#map {';
+                        echo'height: 100%;';
+                        echo'width: 45%; ';
+                        echo'}';
+                        echo'</style>';
+                        echo'<html>';
+                        echo'<head>';
+                        echo'    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>';
+                        echo'    <script type="module" src="/js/index.js"></script>';
+                        echo'</head>';
+                        echo'<body>';
+                        echo'    <div id="map"></div>';
+                        echo'    <script async';
+                        echo'        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBroPU84jDYqgJVS1SyNdKNaTVQqs1fuog&callback=initMap">';
+                        echo'    </script>';
+                        echo'</body>';
+                        echo'</html>';
+                    
+                    } else{
+                        header('Location: basket.php');
+                    }
+                    
+                ?>
+                </div>
+            </div>
+        </div>
+        </section>
 
-if(isset($_POST['car-id'])){
-
-    echo'<h1>Please make the full payment at your local dealership</h1>';
-
-    echo'<style>';
-    echo'#map {';
-    echo'height: 400px;';
-    echo'width: 45%; ';
-    echo'}';
-    echo'</style>';
-    echo'<html>';
-    echo'<head>';
-    echo'    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>';
-    echo'    <script type="module" src="/js/index.js"></script>';
-    echo'</head>';
-    echo'<body>';
-    echo'    <div id="map"></div>';
-    echo'    <script async';
-    echo'        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBroPU84jDYqgJVS1SyNdKNaTVQqs1fuog&callback=initMap">';
-    echo'    </script>';
-    echo'</body>';
-    echo'</html>';
-
-} else{
-    header('Location: basket.php');
-}
+        <!-- Contact-->
+        <section class="contact-section bg-black" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Global Finance Dealership, Spon End, Coventry CV1 3HF</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="#!">contact@globalfinance.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">024 5468 7291</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Global Finance 2022-2023</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

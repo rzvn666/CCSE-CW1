@@ -15,14 +15,14 @@ if (isset($_POST['login-button'])) {
   
     if (empty($email)) {
         array_push($errors, "Email is required");
-        header("Location: login.html?error=email-empty");
+        header("Location: login.php?error=email-empty");
     } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: login.html?error=email-invalid");
+        header("Location: login.php?error=email-invalid");
         die();
     }
     if (empty($password)) {
         array_push($errors, "Password is required");
-        header("Location: login.html?error=password-empty");
+        header("Location: login.php?error=password-empty");
     }
   
     if (count($errors) == 0) {
@@ -40,7 +40,7 @@ if (isset($_POST['login-button'])) {
             }
             header('location: index.php?success=login');
         }else {
-            header("Location: login.html?error=wrong-username-or-password");
+            header("Location: login.php?error=wrong-username-or-password");
         }
     }
 }

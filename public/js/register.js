@@ -6,10 +6,12 @@ function valPassword() {
 
     if(pw1 != pw2){
             document.getElementById("pass-confirm").style.color = 'red';   
-            document.getElementById("pass-confirm").innerHTML="Passwords did not match";  
+            document.getElementById("pass-confirm").innerHTML="Passwords did not match."; 
+            document.getElementById("registerbtn").className = "btn btn-primary disabled";  
         } else {  
             document.getElementById("pass-confirm").style.color = 'green';   
-            document.getElementById("pass-confirm").innerHTML="Passwords match";
+            document.getElementById("pass-confirm").innerHTML="Passwords match.";
+            document.getElementById("registerbtn").className = "btn btn-primary"; 
         }  
 }
 

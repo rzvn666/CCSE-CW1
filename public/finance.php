@@ -136,7 +136,7 @@ if(isset($_SESSION['email'])){
     }
 
 }else{
-    header('Location: login.html');
+    header('Location: login.php');
 }
 
 ?>
