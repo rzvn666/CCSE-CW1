@@ -22,7 +22,7 @@
     <section class="signup-section" id="inventory">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
-                <div class="col-md-10 col-lg-8 mx-auto text-left">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
                     <h1 class="mx-auto my-0 text-uppercase text-white">Inventory</h1>
                 </div>
             </div>

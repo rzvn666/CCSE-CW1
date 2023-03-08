@@ -20,10 +20,10 @@
     <?php include('nav-bar.php'); ?>
 
 
-    <section class="signup-section" id="signup">
+    <section class="signup-section" id="title">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
-                <div class="col-md-10 col-lg-8 mx-auto text-left">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
                     <h1 class="mx-auto my-0 text-uppercase text-white">Basket</h1>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                         }
                         
                     } else {
-                        echo' <h1> Your basket is empty. <a href="cars.php">Click here</a> to see our inventory</h1>';
+                        echo' <h1 class="text-center"> Your basket is empty. <a href="cars.php">Click here</a> to see our inventory</h1>';
                     }
                 ?>
 

@@ -11,16 +11,9 @@
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 <li class="nav-item"><a class="nav-link" href="cars.php#cars">Cars</a></li>
+                <li class="nav-item"><a class="nav-link" href="basket.php#basket"> Basket</a></li>
                 <?php 
                     session_start();    
-                    echo '<li class="nav-item"><a class="nav-link" href="basket.php#basket"> Basket ';
-                        if(isset($_SESSION['cart'])){
-                            echo '<span class="cart_count">1</span>';
-                        }else{
-                            echo '<span class="cart_count">0</span>';
-                        }
-                    echo '</a></li>';              
-
                     if(isset($_SESSION['email'])) {
 
                         if($_SESSION['admin']==1){
