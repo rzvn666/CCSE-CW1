@@ -160,7 +160,7 @@
                             echo'            <i class="fas fa-map-marked-alt text-primary mb-2"></i>';
                             echo'            <h4 class="text-uppercase m-0">Address</h4>';
                             echo'            <hr class="my-4 mx-auto" />';
-                            if($row_customer['mobile']==NULL){ 
+                            if($row_customer['address']==NULL){ 
                                 echo' <div class="col p-3"><input class="form-control" type="text" placeholder="Enter Address" name="address" id="address" required/></div>';
                             } else{
                                 echo'            <div class="text-black">'.$row_customer['address'].'</div>';

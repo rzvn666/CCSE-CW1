@@ -5,10 +5,15 @@ if(isset($_POST['finance-submit'])){
     session_start();
     include('../include/db-connection.php');
 
+    echo $_POST['address'];
+
+    echo '    '.$_SESSION['acc_id'];
+  
     if(isset($_POST['address'])){
         $sql="UPDATE ccse_accounts.accounts SET address='{$_POST['address']}' WHERE account_id={$_SESSION['acc_id']}";
         $query=$conn->query($sql);
     } 
+    echo $_POST['address'];
 
     if (isset($_POST['mobile'])){
         $sql="UPDATE ccse_accounts.accounts SET mobile='{$_POST['mobile']}' WHERE account_id={$_SESSION['acc_id']}";

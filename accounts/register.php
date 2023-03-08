@@ -50,10 +50,15 @@
             $sql = "INSERT INTO ccse_accounts.accounts (`first_name`, `last_name`, `email`, `pass`, `date_created`) 
             VALUES ('$firstname','$lastname','$email','$password',NOW());";
             if ($conn->query($sql) === TRUE) {
-                $conn->close();
-                $_SESSION['acc_id']=$rows['account_id'];
                 $_SESSION['email']=$email;
                 $_SESSION['firstname']=$firstname;
+
+
+                $sql = "SELECT * FROM ccse_accounts.accounts WHERE email='$email' AND pass='$password'";
+                $query=$conn->query($sql);
+                $rows=$query->fetch_array();
+                $_SESSION['acc_id']=$rows['account_id'];
+                
                 header("Location: index.php");
                 die();
             } else {
