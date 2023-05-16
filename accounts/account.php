@@ -140,9 +140,9 @@
                     }
                     
                 } else {
-			header('Location: /login.php?error=must-be-logged-in');
-			exit();
-            }
+                    header('Location: /login.php?error=must-be-logged-in');
+                    exit();
+                }
 
                 
             ?>
