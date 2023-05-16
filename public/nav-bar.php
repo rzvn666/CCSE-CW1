@@ -1,4 +1,5 @@
 <!-- Navigation-->
+<?php session_start();    ?>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="#page-top">Global Finance</a>
@@ -13,7 +14,6 @@
                 <li class="nav-item"><a class="nav-link" href="cars.php#cars">Cars</a></li>
                 <li class="nav-item"><a class="nav-link" href="basket.php#basket"> Basket</a></li>
                 <?php 
-                    session_start();    
                     if(isset($_SESSION['email'])) {
 
                         if($_SESSION['admin']==1){

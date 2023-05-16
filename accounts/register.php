@@ -18,32 +18,32 @@
 
         // form validation: ensure that the form is correctly filled ...        
         if (empty($email)) {
-            header("Location: register.php?error=email-empty");
-            die();
+            header("Location: /register.php?error=email-empty");
+            exit();
         } 
 
         elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            header("Location: register.php?error=email-invalid");
-            die();
+            header("Location: /register.php?error=email-invalid");
+            exit();
         }
 
         elseif(isset($email)){
             $sql = "SELECT 1 FROM ccse_accounts.accounts WHERE email='$email';";
             $query = $conn->query($sql);
             if ($query->num_rows) {
-                header("Location: register.php?error=email-taken");
-                die();
+                header("Location: /register.php?error=email-taken");
+                exit();
             }
         }
 
         if (empty($password)) { 
-            header("Location: register.php?error=pass-empty"); 
-            die();
+            header("Location: /register.php?error=pass-empty"); 
+            exit();
         }
 
         if ($password != $conf_password) {
-            header("Location: register.php?error=pass-not-matched");
-            die();
+            header("Location: /register.php?error=pass-not-matched");
+            exit();
         }
 
         if ($password == $conf_password) {
@@ -59,11 +59,11 @@
                 $rows=$query->fetch_array();
                 $_SESSION['acc_id']=$rows['account_id'];
                 
-                header("Location: index.php");
-                die();
+                header("Location: /index.php");
+                exit();
             } else {
-                header("Location: register.php?error=wrong-query");
-                die();
+                header("Location: /register.php?error=wrong-query");
+                exit();
             }
         }
         

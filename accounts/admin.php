@@ -23,7 +23,8 @@
         session_start();
 
         if($_SESSION['firstname']!='admin' AND $_SESSION['email']!='admin@admin.com' AND $_SESSION['admin']!=1){
-            header('Location: error.php');
+		header('Location: /error.php');
+		exit();
         }
     ?>
 

@@ -72,11 +72,13 @@ if(isset($_POST['finance-submit'])){
     unset($_SESSION['car_id']);
     unset($_SESSION['cart']);   
 
-    header('Location: thankyou.php');
+    header('Location: /thankyou.php');
+    exit();
 
 
 } else {
-    header('Location: error.php');
+	header('Location: /error.php');
+	exit();
 }
 
 ?>

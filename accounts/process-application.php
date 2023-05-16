@@ -12,7 +12,8 @@ if($_SESSION['admin']==1){
             $sql_app="UPDATE ccse_applications.applications SET status='APPROVED' WHERE car_id={$_POST['car-id']}";
             $query_app=$conn->query($sql_app);
 
-            header('location: admin.php');
+	    header('location: /admin.php');
+	    exit();
 
 
         } elseif($_POST['send']=='deny'){
@@ -21,15 +22,18 @@ if($_SESSION['admin']==1){
 
             $sql_app="UPDATE ccse_applications.applications SET status='DENIED' WHERE car_id={$_POST['car-id']}";
             $query_app=$conn->query($sql_app);
-            header('location: admin.php');
+	    header('location: /admin.php');
+	    exit();
 
         }
 
     }else{
-        header('location: admin.php');
+	    header('location: /admin.php');
+	    exit();
     }
 } else{
- header('location: error.php');
+	header('location: /error.php');
+	exit();
 }
 
 

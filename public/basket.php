@@ -38,22 +38,27 @@
             <?php
                     session_start();
 
+		    //echo'<div>'.$_POST['car_id'].'</div>';
                     if(isset($_POST['send']))
                     {
+		        //echo'<div>'.$_POST['car_id'].'</div>';
                         $_SESSION['cart']=1;
                         if(isset($_SESSION['cart'])){        
                             if($_SESSION['car_id']==$_POST['car-id']){
                                 echo '<script>alert("Item Already Added")</script>';  
-                                echo '<script>window.location="cars.php"</script>';
+				echo '<script>window.location="cars.php"</script>';
+				exit();
                             }else{
                                 $_SESSION['car_id'] = $_POST['car-id'];
-                                echo '<script>window.location="basket.php"</script>';   
+				echo '<script>window.location="basket.php"</script>';   
+				exit();
                             }
                         }
                         else  
                         {  
                             $_SESSION['car_id'] = $_POST['car-id'];
-                            echo '<script>window.location="cars.php"</script>';
+			    echo '<script>window.location="cars.php"</script>';
+			    exit();
                         }  
                     }
                     if(isset($_SESSION['car_id'])){
@@ -92,7 +97,8 @@
 
                         }
                         
-                    } else {
+		    } else {
+			//echo '<div>'.$_POST['car_id'].'</div>';
                         echo' <h1 class="text-center"> Your basket is empty. <a href="cars.php">Click here</a> to see our inventory</h1>';
                     }
                 ?>

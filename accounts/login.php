@@ -15,20 +15,22 @@ if (isset($_POST['login-button'])) {
   
     if (empty($email)) {
         array_push($errors, "Email is required");
-        header("Location: login.php?error=email-empty");
+	header("Location: /login.php?error=email-empty");
+	exit();
     } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: login.php?error=email-invalid");
-        die();
+        header("Location: /login.php?error=email-invalid");
+        exit();
     }
     if (empty($password)) {
         array_push($errors, "Password is required");
-        header("Location: login.php?error=password-empty");
+	header("Location: /login.php?error=password-empty");
+	exit();
     }
   
     if (count($errors) == 0) {
 
         $query = "SELECT * FROM ccse_accounts.accounts WHERE email='$email' AND pass='$password'";
-        echo($query);
+        //echo($query);
         $results = $conn->query($query);
         $rows=$results->fetch_array();
         if (mysqli_num_rows($results) == 1) {
@@ -38,9 +40,11 @@ if (isset($_POST['login-button'])) {
             if($rows['admin']==1){
                 $_SESSION['admin']=1;
             }
-            header('location: index.php?success=login');
+	    header('location: /index.php?success=login');
+	    exit();
         }else {
-            header("Location: login.php?error=wrong-username-or-password");
+		header("Location: /login.php?error=wrong-username-or-password");
+		exit();
         }
     }
 }

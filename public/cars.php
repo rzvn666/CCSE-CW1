@@ -45,7 +45,7 @@
                     echo'                    <div class="featured-text text-center text-lg-left">';
                     echo'                       <h4>'.$row['make'].' '.$row['model'].'</h4>';
                     echo'                       <h5>'.$row['year'].'</h5>';
-                    echo'                       <h6 class="car-value">£'.$row['price'][0].','.substr($row['price'],1).'.00</h6>';
+		    echo'                       <h6 class="car-value">£'.$row['price'][0].','.substr($row['price'],1).'.00</h6>';
                     echo'                       <form action="basket.php" method="POST">';
                     echo'                           <input type="hidden" name="car-id" value='.$row['id'].' />';
                     echo'                           <button class="btn btn-primary" name="send" value="add">Add To Cart</button>';

@@ -58,7 +58,8 @@
                         echo'</html>';
                     
                     } else{
-                        header('Location: basket.php');
+			    header('Location: /basket.php');
+			    exit();
                     }
                     
                 ?>

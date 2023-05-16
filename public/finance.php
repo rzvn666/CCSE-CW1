@@ -196,15 +196,18 @@
                         }
                         
                     } else {
-                        header('Location: basket.php');
+			    header('Location: /basket.php');
+			    exit();
                     }
 
                 } else{
-                    header('Location: basket.php');
+			header('Location: /basket.php');
+			exit();
                 }
 
             }else{
-                header('Location: login.php');
+		    header('Location: /login.php');
+		    exit();
             }
 
             ?>
