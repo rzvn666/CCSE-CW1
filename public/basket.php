@@ -46,21 +46,18 @@
                         if(isset($_SESSION['cart'])){        
                             if($_SESSION['car_id']==$_POST['car-id']){
                                 echo '<script>alert("Item Already Added")</script>';  
-                                //echo '<script>window.location="cars.php"</script>';
-                                header('Location: /cars.php');
+                                echo '<script>window.location="/cars.php"</script>';
                                 exit();
                             }else{
                                 $_SESSION['car_id'] = $_POST['car-id'];
-                                //echo '<script>window.location="basket.php"</script>'; 
-                                header('Location: /basket.php');  
+                                echo '<script>window.location="/basket.php"</script>';   
                                 exit();
                             }
                         }
                         else  
                         {  
                             $_SESSION['car_id'] = $_POST['car-id'];
-                            //echo '<script>window.location="cars.php"</script>';
-                            header('Location: /cars.php');
+                            echo '<script>window.location="/cars.php"</script>';
                             exit();
                         }  
                     }
